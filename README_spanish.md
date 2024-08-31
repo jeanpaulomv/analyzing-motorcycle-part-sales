@@ -1,84 +1,84 @@
-# Motorcycle Parts Sales Analysis 🏍️
+# Análisis de Ventas de Partes de Motocicletas 🏍️
 
-## Project Description 📊
+## Descripción del Proyecto 📊
 
-This project analyzes sales data from a company that sells motorcycle parts, focusing on wholesale transactions. The goal of the analysis is to provide useful insights into revenue sources by examining product lines, payment fees, and warehouse distribution. This project is part of a DataCamp course and demonstrates my ability to work with large datasets, perform complex SQL queries, and use PostgreSQL for data management.
+Este proyecto analiza datos de ventas de una empresa que comercializa partes de motocicletas, con un enfoque en las transacciones al por mayor. El objetivo del análisis es proporcionar insights útiles sobre las fuentes de ingresos, examinando líneas de productos, tarifas de pago y la distribución por almacenes. Este proyecto forma parte de un curso de DataCamp y demuestra mi capacidad para trabajar con grandes conjuntos de datos, realizar consultas SQL complejas y utilizar PostgreSQL para la gestión de datos.
 
-## Key Steps in the Analysis 🔍
+## Pasos Clave en el Análisis 🔍
 
-1. **Data Transformation:**
+1. **Transformación de Datos:**
 
-   - Dates were converted to month names to simplify analysis.
-   - Payment fees were subtracted from the total order value to calculate net revenue.
+   - Las fechas se convirtieron en nombres de meses para simplificar el análisis.
+   - Se restaron las tarifas de pago del valor total de los pedidos para calcular el ingreso neto.
 
-2. **Data Filtering and Grouping:**
+2. **Filtrado y Agrupación de Datos:**
 
-   - Focused exclusively on wholesale orders.
-   - Data was grouped by product line, month, and warehouse.
-   - Results were sorted by product line, month, and net revenue.
+   - Se enfocó exclusivamente en pedidos al por mayor.
+   - Se agruparon los datos por línea de producto, mes y almacén.
+   - Se ordenaron los resultados por línea de producto, mes e ingreso neto.
 
-3. **Database Management:**
+3. **Gestión de la Base de Datos:**
 
-   - PostgreSQL was used to store and manage sales data.
-   - SQLAlchemy was employed in Python to facilitate data import and manipulation.
-   - SQL queries were created to extract relevant information and generate reports.
+   - Se utilizó PostgreSQL para almacenar y gestionar los datos de ventas.
+   - Se empleó SQLAlchemy en Python para facilitar la importación y manipulación de datos.
+   - Se crearon consultas SQL para extraer información relevante y generar reportes.
 
-## Technologies and Tools Used 🛠️
+## Tecnologías y Herramientas Utilizadas 🛠️
 
-- **PostgreSQL:** For database management.
-- **SQLAlchemy:** To connect Python with PostgreSQL.
-- **Pandas:** For data manipulation in Python.
-- **Jupyter Notebook:** To document the analysis process.
-- **Python:** For data import and transformation.
+- **PostgreSQL:** Para la gestión de la base de datos.
+- **SQLAlchemy:** Para conectar Python con PostgreSQL.
+- **Pandas:** Para la manipulación de datos en Python.
+- **Jupyter Notebook:** Para documentar el proceso de análisis.
+- **Python:** Para la importación y transformación de datos.
 
-## How to Use This Project 🚀
+## Cómo Usar Este Proyecto 🚀
 
-1. **Clone the Repository:**
+1. **Clonar el Repositorio:**
 
    - `git clone <repository_url>`
 
-2. **Install Dependencies:**
+2. **Instalar Dependencias:**
 
-   - Make sure you have all required packages installed. Check the [`requirements.txt`](./requirements.txt) file.
+   - Asegúrate de tener todos los paquetes requeridos instalados. Consulta el archivo [`requirements.txt`](./requirements.txt).
 
-3. **Run the Analysis:**
+3. **Ejecutar el Análisis:**
 
-   - Follow the instructions provided in the [project instructions notebook](project_instructions.ipynb).
+   - Sigue las instrucciones provistas en el [notebook de instrucciones del proyecto](project_instructions.ipynb).
 
-## File Structure 📁
+## Estructura de Archivos 📁
 
-- [`.gitignore`](./.gitignore) - Specifies files and directories to be ignored by Git.
-- [`project_instructions/motorcycle.jpg`](motorcycle.jpg) - Image used in the project.
-- [`project_instructions/project_instructions.ipynb`](project_instructions.ipynb) - Jupyter Notebook with project instructions.
-- [`README.md`](./README.md) - This documentation file.
-- [`README_spanish.md`](./README_spanish.md) - Spanish version of the documentation.
-- [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) - Python script to import CSV data to PostgreSQL.
-- [`sales.csv`](./sales.csv) - Sales data used in the project.
-- [`query_solution.sql`](./query_solution.sql) - SQL query used to extract and analyze data.
+- [`.gitignore`](./.gitignore) - Especifica archivos y directorios que serán ignorados por Git.
+- [`project_instructions/motorcycle.jpg`](motorcycle.jpg) - Imagen utilizada en el proyecto.
+- [`project_instructions/project_instructions.ipynb`](project_instructions.ipynb) - Jupyter Notebook con las instrucciones del proyecto.
+- [`README.md`](./README.md) - Este archivo de documentación.
+- [`README_spanish.md`](./README_spanish.md) - Versión en español de la documentación.
+- [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) - Script en Python para importar datos del CSV a PostgreSQL.
+- [`sales.csv`](./sales.csv) - Datos de ventas utilizados en el proyecto.
+- [`query_solution.sql`](./query_solution.sql) - Consulta SQL utilizada para extraer y analizar datos.
 
-## Documentation and Setup Instructions 📑
+## Documentación e Instrucciones de Configuración 📑
 
-1. **Install Dependencies:**
+1. **Instalación de Dependencias:**
 
-   - Run `pip install -r requirements.txt` to install all necessary libraries.
+   - Ejecuta `pip install -r requirements.txt` para instalar todas las bibliotecas necesarias.
 
-2. **Set Up Environment Variables:**
+2. **Configuración de Variables de Entorno:**
 
-   - Create a `.env` file in the root directory and add the following:
+   - Crea un archivo `.env` en el directorio raíz y agrega lo siguiente:
      ```plaintext
-     DATABASE_URL=your_database_url_here
+     DATABASE_URL=tu_url_de_base_de_datos_aqui
      ```
-   - Replace `your_database_url_here` with your PostgreSQL database URL.
+   - Reemplaza `tu_url_de_base_de_datos_aqui` con la URL de tu base de datos PostgreSQL.
 
-3. **Run the Python Script:**
+3. **Ejecución del Script en Python:**
 
-   - Execute the [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) script to import CSV data into the PostgreSQL database.
-   - The script reads from `sales.csv` and populates the `sales` table in your PostgreSQL database.
+   - Ejecuta el script [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) para importar los datos del CSV a la base de datos PostgreSQL.
+   - El script lee desde `sales.csv` y llena la tabla `sales` en tu base de datos PostgreSQL.
 
-4. **Run SQL Query:**
+4. **Ejecutar Consulta SQL:**
 
-   - Review and execute the query in [`query_solution.sql`](./query_solution.sql) to obtain the requested report.
+   - Revisa y ejecuta la consulta en [`query_solution.sql`](./query_solution.sql) para obtener el reporte solicitado.
 
-## Conclusion 🎯
+## Conclusión 🎯
 
-This project provides valuable insights into wholesale revenue by product line, month, and warehouse, helping the company better understand its financial performance. The approach used in this analysis is efficient and can be adapted to similar business scenarios.
+Este proyecto proporciona información valiosa sobre los ingresos al por mayor por línea de producto, mes y almacén, ayudando a la empresa a comprender mejor su rendimiento financiero. El enfoque utilizado en este análisis es eficiente y se puede adaptar a escenarios comerciales similares.
