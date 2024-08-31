@@ -40,13 +40,13 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
    - Asegúrate de tener todos los paquetes requeridos instalados. Consulta el archivo [`requirements.txt`](./requirements.txt).
 
 3. **Ejecutar el Análisis:**
-   - Sigue las instrucciones provistas en el [notebook de instrucciones del proyecto](./1_project_instructions/project_instructions.ipynb).
+   - Sigue las instrucciones provistas en el [notebook de instrucciones del proyecto](project_instructions.ipynb).
 
 ## Estructura de Archivos 📁
 
 - [`.gitignore`](./.gitignore) - Especifica archivos y directorios que serán ignorados por Git.
-- [`1_project_instructions/motorcycle.jpg`](./1_project_instructions/motorcycle.jpg) - Imagen utilizada en el proyecto.
-- [`1_project_instructions/project_instructions.ipynb`](./1_project_instructions/project_instructions.ipynb) - Jupyter Notebook con las instrucciones del proyecto.
+- [`project_instructions/motorcycle.jpg`](motorcycle.jpg) - Imagen utilizada en el proyecto.
+- [`project_instructions/project_instructions.ipynb`](project_instructions.ipynb) - Jupyter Notebook con las instrucciones del proyecto.
 - [`README.md`](./README.md) - Este archivo de documentación.
 - [`README_spanish.md`](./README_spanish.md) - Versión en español de la documentación.
 - [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) - Script en Python para importar datos del CSV a PostgreSQL.
