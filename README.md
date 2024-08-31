@@ -45,8 +45,8 @@ This project analyzes sales data for a motorcycle parts company, focusing on who
 ## File Structure 📁
 
 - [`.gitignore`](./.gitignore) - Specifies files and directories to be ignored by Git.
-- [`project_instructions/motorcycle.jpg`](project_instructions.ipynb) - Image used in the project.
-- [`1_project_instructions/project_instructions.ipynb`](./1_project_instructions/project_instructions.ipynb) - Jupyter Notebook with project instructions.
+- [`project_instructions/motorcycle.jpg`](motorcycle.jpg) - Image used in the project.
+- [`project_instructions/project_instructions.ipynb`](project_instructions.ipynb) - Jupyter Notebook with project instructions.
 - [`README.md`](./README.md) - This documentation file.
 - [`README_spanish.md`](./README_spanish.md) - Spanish version of the documentation.
 - [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) - Python script to import CSV data into PostgreSQL.
