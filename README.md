@@ -40,12 +40,12 @@ This project analyzes sales data for a motorcycle parts company, focusing on who
    - Make sure you have all the required packages installed. Refer to the [`requirements.txt`](./requirements.txt) file.
 
 3. **Run the Analysis:**
-   - Follow the instructions provided in the [project instructions notebook](./1_project_instructions/project_instructions.ipynb).
+   - Follow the instructions provided in the [project instructions notebook](project_instructions.ipynb).
 
 ## File Structure 📁
 
 - [`.gitignore`](./.gitignore) - Specifies files and directories to be ignored by Git.
-- [`1_project_instructions/motorcycle.jpg`](./1_project_instructions/motorcycle.jpg) - Image used in the project.
+- [`project_instructions/motorcycle.jpg`](project_instructions.ipynb) - Image used in the project.
 - [`1_project_instructions/project_instructions.ipynb`](./1_project_instructions/project_instructions.ipynb) - Jupyter Notebook with project instructions.
 - [`README.md`](./README.md) - This documentation file.
 - [`README_spanish.md`](./README_spanish.md) - Spanish version of the documentation.
