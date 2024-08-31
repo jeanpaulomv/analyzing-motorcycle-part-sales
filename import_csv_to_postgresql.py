@@ -3,19 +3,19 @@ from sqlalchemy import create_engine
 from dotenv import load_dotenv
 import os
 
-# Cargar variables de entorno
+# Load environment variables
 load_dotenv()
 
-# Obtener credenciales y detalles de conexión desde variables de entorno
+# Obtaining credentials and connection details from environment variables
 db_url = os.getenv('DATABASE_URL')
 
-# Conectar a PostgreSQL
+# Connect to PostgreSQL
 engine = create_engine(db_url)
 
-# Leer archivo CSV
+# Read CSV file
 df = pd.read_csv('sales.csv')
 
-# Crear la tabla automáticamente e importar los datos
+# Create the table automatically and import the data
 df.to_sql('sales', engine, index=False, if_exists='replace')
 
 print("Table created and data imported successfully.")

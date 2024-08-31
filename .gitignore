@@ -1,5 +1,49 @@
-.venv/
-__pycache__/
-*.pyc
+# Directorios y archivos generados por el sistema
 .DS_Store
+Thumbs.db
+
+# Archivos de configuración de editor
+.vscode/
+*.swp
+*.swo
+
+# Archivos de configuración de IDE
+.idea/
+*.iml
+
+# Directorios de entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos de caché
+*.pyc
+*.pyo
+__pycache__/
+
+# Archivos de logs
+*.log
+
+# Archivos de dependencias
 .env
+*.env
+
+# Archivos de paquetes
+*.egg
+*.egg-info/
+
+# Archivos de construcción
+build/
+dist/
+*.egg-info/
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+
+# Archivos de caché
+.cache/
+
+# Control de versiones y repositorios locales
+.git/
