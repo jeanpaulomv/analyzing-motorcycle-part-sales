@@ -31,30 +31,17 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
 - **Jupyter Notebook:** Para documentar el proceso de análisis.
 - **Python:** Para la importación y transformación de datos.
 
-## Cómo Usar Este Proyecto 🚀
-
-1. **Clonar el Repositorio:**
-
-   - `git clone <repository_url>`
-
-2. **Instalar Dependencias:**
-
-   - Asegúrate de tener todos los paquetes requeridos instalados. Consulta el archivo [`requirements.txt`](./requirements.txt).
-
-3. **Ejecutar el Análisis:**
-
-   - Sigue las instrucciones provistas en el [notebook de instrucciones del proyecto](project_instructions.ipynb).
-
 ## Estructura de Archivos 📁
 
-- [`.gitignore`](./.gitignore) - Especifica archivos y directorios que serán ignorados por Git.
-- [`project_instructions/motorcycle.jpg`](motorcycle.jpg) - Imagen utilizada en el proyecto.
-- [`project_instructions/project_instructions.ipynb`](project_instructions.ipynb) - Jupyter Notebook con las instrucciones del proyecto.
-- [`README.md`](./README.md) - Este archivo de documentación.
-- [`README_spanish.md`](./README_spanish.md) - Versión en español de la documentación.
-- [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) - Script en Python para importar datos del CSV a PostgreSQL.
-- [`sales.csv`](./sales.csv) - Datos de ventas utilizados en el proyecto.
-- [`query_solution.sql`](./query_solution.sql) - Consulta SQL utilizada para extraer y analizar datos.
+- [`datos`](data/sales.csv) - Datos de ventas utilizados en el proyecto.
+- [`imagen`](images/motorcycle.jpg) - Imagen utilizada en el cuaderno.
+- [`notebook`](notebooks/project_instructions.ipynb) - Cuaderno de Jupyter con las instrucciones del proyecto.
+- [`solución de consulta`](sql/query_solution.sql) - Consulta SQL utilizada para extraer y analizar los datos.
+- [`script`](src/import_csv_to_postgresql.py) - Script en Python para importar datos CSV a PostgreSQL.
+- [`.gitignore`](./.gitignore) - Especifica los archivos y directorios que deben ser ignorados por Git.
+- [`README.md`](README.md) - Este archivo de documentación.
+- [`README_spanish.md`](README_spanish.md) - Versión en español de la documentación.
+- [`requirements.txt`](requirements.txt) - Instala todas las dependencias.
 
 ## Documentación e Instrucciones de Configuración 📑
 
@@ -72,12 +59,12 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
 
 3. **Ejecución del Script en Python:**
 
-   - Ejecuta el script [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) para importar los datos del CSV a la base de datos PostgreSQL.
+   - Ejecuta el script [`import_csv_to_postgresql.py`](src/import_csv_to_postgresql.py) para importar los datos del CSV a la base de datos PostgreSQL.
    - El script lee desde `sales.csv` y llena la tabla `sales` en tu base de datos PostgreSQL.
 
 4. **Ejecutar Consulta SQL:**
 
-   - Revisa y ejecuta la consulta en [`query_solution.sql`](./query_solution.sql) para obtener el reporte solicitado.
+   - Revisa y ejecuta la consulta en [`query_solution.sql`](sql/query_solution.sql) para obtener el reporte solicitado.
 
 ## Conclusión 🎯
 
