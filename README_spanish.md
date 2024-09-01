@@ -18,8 +18,10 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
    - Se ordenaron los resultados por línea de producto, mes e ingreso neto.
 
 3. **Gestión de la Base de Datos:**
+
    - Se utilizó PostgreSQL para almacenar y gestionar los datos de ventas.
    - Se empleó SQLAlchemy en Python para facilitar la importación y manipulación de datos.
+   - Se crearon consultas SQL para extraer información relevante y generar reportes.
 
 ## Tecnologías y Herramientas Utilizadas 🛠️
 
@@ -40,17 +42,19 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
    - Asegúrate de tener todos los paquetes requeridos instalados. Consulta el archivo [`requirements.txt`](./requirements.txt).
 
 3. **Ejecutar el Análisis:**
-   - Sigue las instrucciones provistas en el [notebook de instrucciones del proyecto](./1_project_instructions/project_instructions.ipynb).
+
+   - Sigue las instrucciones provistas en el [notebook de instrucciones del proyecto](project_instructions.ipynb).
 
 ## Estructura de Archivos 📁
 
 - [`.gitignore`](./.gitignore) - Especifica archivos y directorios que serán ignorados por Git.
-- [`1_project_instructions/motorcycle.jpg`](./1_project_instructions/motorcycle.jpg) - Imagen utilizada en el proyecto.
-- [`1_project_instructions/project_instructions.ipynb`](./1_project_instructions/project_instructions.ipynb) - Jupyter Notebook con las instrucciones del proyecto.
+- [`project_instructions/motorcycle.jpg`](motorcycle.jpg) - Imagen utilizada en el proyecto.
+- [`project_instructions/project_instructions.ipynb`](project_instructions.ipynb) - Jupyter Notebook con las instrucciones del proyecto.
 - [`README.md`](./README.md) - Este archivo de documentación.
 - [`README_spanish.md`](./README_spanish.md) - Versión en español de la documentación.
 - [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) - Script en Python para importar datos del CSV a PostgreSQL.
 - [`sales.csv`](./sales.csv) - Datos de ventas utilizados en el proyecto.
+- [`query_solution.sql`](./query_solution.sql) - Consulta SQL utilizada para extraer y analizar datos.
 
 ## Documentación e Instrucciones de Configuración 📑
 
@@ -67,8 +71,13 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
    - Reemplaza `tu_url_de_base_de_datos_aqui` con la URL de tu base de datos PostgreSQL.
 
 3. **Ejecución del Script en Python:**
+
    - Ejecuta el script [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) para importar los datos del CSV a la base de datos PostgreSQL.
    - El script lee desde `sales.csv` y llena la tabla `sales` en tu base de datos PostgreSQL.
+
+4. **Ejecutar Consulta SQL:**
+
+   - Revisa y ejecuta la consulta en [`query_solution.sql`](./query_solution.sql) para obtener el reporte solicitado.
 
 ## Conclusión 🎯
 
