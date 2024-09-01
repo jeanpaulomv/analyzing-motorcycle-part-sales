@@ -31,30 +31,17 @@ This project analyzes sales data from a company that sells motorcycle parts, foc
 - **Jupyter Notebook:** To document the analysis process.
 - **Python:** For data import and transformation.
 
-## How to Use This Project 🚀
-
-1. **Clone the Repository:**
-
-   - `git clone <repository_url>`
-
-2. **Install Dependencies:**
-
-   - Make sure you have all required packages installed. Check the [`requirements.txt`](./requirements.txt) file.
-
-3. **Run the Analysis:**
-
-   - Follow the instructions provided in the [project instructions notebook](project_instructions.ipynb).
-
 ## File Structure 📁
 
+- [`data`](data/sales.csv) - Sales data used in the project.
+- [`image`](images/motorcycle.jpg) - Image used in the Notebook.
+- [`notebook`](notebooks/project_instructions.ipynb) - Jupyter Notebook with project instructions.
+- [`query solution`](sql/query_solution.sql) - SQL query used to extract and analyze data.
+- [`script`](src/import_csv_to_postgresql.py) - Python script to import CSV data to PostgreSQL.
 - [`.gitignore`](./.gitignore) - Specifies files and directories to be ignored by Git.
-- [`project_instructions/motorcycle.jpg`](motorcycle.jpg) - Image used in the project.
-- [`project_instructions/project_instructions.ipynb`](project_instructions.ipynb) - Jupyter Notebook with project instructions.
-- [`README.md`](./README.md) - This documentation file.
-- [`README_spanish.md`](./README_spanish.md) - Spanish version of the documentation.
-- [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) - Python script to import CSV data to PostgreSQL.
-- [`sales.csv`](./sales.csv) - Sales data used in the project.
-- [`query_solution.sql`](./query_solution.sql) - SQL query used to extract and analyze data.
+- [`README.md`](README.md) - This documentation file.
+- [`README_spanish.md`](README_spanish.md) - Spanish version of the documentation.
+- [`requirements.txt`](requirements.txt) - Install all dependencies.
 
 ## Documentation and Setup Instructions 📑
 
@@ -72,12 +59,12 @@ This project analyzes sales data from a company that sells motorcycle parts, foc
 
 3. **Run the Python Script:**
 
-   - Execute the [`import_csv_to_postgresql.py`](./import_csv_to_postgresql.py) script to import CSV data into the PostgreSQL database.
+   - Execute the [`import_csv_to_postgresql.py`](src/import_csv_to_postgresql.py) script to import CSV data into the PostgreSQL database.
    - The script reads from `sales.csv` and populates the `sales` table in your PostgreSQL database.
 
 4. **Run SQL Query:**
 
-   - Review and execute the query in [`query_solution.sql`](./query_solution.sql) to obtain the requested report.
+   - Review and execute the query in [`query_solution.sql`](sql/query_solution.sql) to obtain the requested report.
 
 ## Conclusion 🎯
 
