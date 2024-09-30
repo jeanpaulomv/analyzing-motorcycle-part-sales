@@ -75,4 +75,3 @@ Este proyecto proporciona información valiosa sobre los ingresos al por mayor p
 Si tienes preguntas o quieres más información, ponte en contacto conmigo.
 
 <a href="https://www.linkedin.com/in/jeanpaulomv/"><img src="https://img.shields.io/badge/jeanpaulomv-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"></a>
-<a href="https://www.upwork.com/freelancers/~017f203a5583495e29?mp_source=share"><img src="https://img.shields.io/badge/UpWork-6FDA44?style=for-the-badge&logo=Upwork&logoColor=white" alt="Upwork" height="30"></a>
