@@ -1,10 +1,10 @@
-# Análisis de Ventas de Partes de Motocicletas 🏍️
+# Análisis de Ventas de Partes de Motocicletas 
 
-## Descripción del Proyecto 📊
+## Descripción del Proyecto 
 
 Este proyecto analiza datos de ventas de una empresa que comercializa partes de motocicletas, con un enfoque en las transacciones al por mayor. El objetivo del análisis es proporcionar insights útiles sobre las fuentes de ingresos, examinando líneas de productos, tarifas de pago y la distribución por almacenes. Este proyecto forma parte de un curso de DataCamp y demuestra mi capacidad para trabajar con grandes conjuntos de datos, realizar consultas SQL complejas y utilizar PostgreSQL para la gestión de datos.
 
-## Pasos Clave en el Análisis 🔍
+## Pasos Clave en el Análisis 
 
 1. **Transformación de Datos:**
 
@@ -23,7 +23,7 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
    - Se empleó SQLAlchemy en Python para facilitar la importación y manipulación de datos.
    - Se crearon consultas SQL para extraer información relevante y generar reportes.
 
-## Tecnologías y Herramientas Utilizadas 🛠️
+## Tecnologías y Herramientas Utilizadas 
 
 - **PostgreSQL:** Para la gestión de la base de datos.
 - **SQLAlchemy:** Para conectar Python con PostgreSQL.
@@ -31,7 +31,7 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
 - **Jupyter Notebook:** Para documentar el proceso de análisis.
 - **Python:** Para la importación y transformación de datos.
 
-## Estructura de Archivos 📁
+## Estructura de Archivos 
 
 - [`datos`](data/sales.csv) - Datos de ventas utilizados en el proyecto.
 - [`imagen`](images/motorcycle.jpg) - Imagen utilizada en el cuaderno.
@@ -43,7 +43,7 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
 - [`README_spanish.md`](README_spanish.md) - Versión en español de la documentación.
 - [`requirements.txt`](requirements.txt) - Instala todas las dependencias.
 
-## Documentación e Instrucciones de Configuración 📑
+## Documentación e Instrucciones de Configuración 
 
 1. **Instalación de Dependencias:**
 
@@ -66,6 +66,13 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
 
    - Revisa y ejecuta la consulta en [`query_solution.sql`](sql/query_solution.sql) para obtener el reporte solicitado.
 
-## Conclusión 🎯
+## Conclusión 
 
 Este proyecto proporciona información valiosa sobre los ingresos al por mayor por línea de producto, mes y almacén, ayudando a la empresa a comprender mejor su rendimiento financiero. El enfoque utilizado en este análisis es eficiente y se puede adaptar a escenarios comerciales similares.
+
+## Contacto
+
+Si tienes preguntas o quieres más información, ponte en contacto conmigo.
+
+<a href="https://www.linkedin.com/in/jeanpaulomv/"><img src="https://img.shields.io/badge/jeanpaulomv-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"></a>
+<a href="https://www.upwork.com/freelancers/~017f203a5583495e29?mp_source=share"><img src="https://img.shields.io/badge/UpWork-6FDA44?style=for-the-badge&logo=Upwork&logoColor=white" alt="Upwork" height="30"></a>
