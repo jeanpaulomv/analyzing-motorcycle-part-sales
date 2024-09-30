@@ -1,10 +1,10 @@
-# Motorcycle Parts Sales Analysis 🏍️
+# Motorcycle Parts Sales Analysis 
 
-## Project Description 📊
+## Project Description 
 
 This project analyzes sales data from a company that sells motorcycle parts, focusing on wholesale transactions. The goal of the analysis is to provide useful insights into revenue sources by examining product lines, payment fees, and warehouse distribution. This project is part of a DataCamp course and demonstrates my ability to work with large datasets, perform complex SQL queries, and use PostgreSQL for data management.
 
-## Key Steps in the Analysis 🔍
+## Key Steps in the Analysis 
 
 1. **Data Transformation:**
 
@@ -23,7 +23,7 @@ This project analyzes sales data from a company that sells motorcycle parts, foc
    - SQLAlchemy was employed in Python to facilitate data import and manipulation.
    - SQL queries were created to extract relevant information and generate reports.
 
-## Technologies and Tools Used 🛠️
+## Technologies and Tools Used 
 
 - **PostgreSQL:** For database management.
 - **SQLAlchemy:** To connect Python with PostgreSQL.
@@ -31,7 +31,7 @@ This project analyzes sales data from a company that sells motorcycle parts, foc
 - **Jupyter Notebook:** To document the analysis process.
 - **Python:** For data import and transformation.
 
-## File Structure 📁
+## File Structure 
 
 - [`data`](data/sales.csv) - Sales data used in the project.
 - [`image`](images/motorcycle.jpg) - Image used in the Notebook.
@@ -43,7 +43,7 @@ This project analyzes sales data from a company that sells motorcycle parts, foc
 - [`README_spanish.md`](README_spanish.md) - Spanish version of the documentation.
 - [`requirements.txt`](requirements.txt) - Install all dependencies.
 
-## Documentation and Setup Instructions 📑
+## Documentation and Setup Instructions 
 
 1. **Install Dependencies:**
 
@@ -66,6 +66,13 @@ This project analyzes sales data from a company that sells motorcycle parts, foc
 
    - Review and execute the query in [`query_solution.sql`](sql/query_solution.sql) to obtain the requested report.
 
-## Conclusion 🎯
+## Conclusion 
 
 This project provides valuable insights into wholesale revenue by product line, month, and warehouse, helping the company better understand its financial performance. The approach used in this analysis is efficient and can be adapted to similar business scenarios.
+
+## Contact
+
+If you have any questions or would like more information, feel free to contact me.
+
+<a href="https://www.linkedin.com/in/jeanpaulomv/"><img src="https://img.shields.io/badge/jeanpaulomv-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"></a>
+<a href="https://www.upwork.com/freelancers/~017f203a5583495e29?mp_source=share"><img src="https://img.shields.io/badge/UpWork-6FDA44?style=for-the-badge&logo=Upwork&logoColor=white" alt="Upwork" height="30"></a>
