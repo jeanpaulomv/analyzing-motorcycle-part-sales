@@ -25,11 +25,11 @@ Este proyecto analiza datos de ventas de una empresa que comercializa partes de 
 
 ## Tecnologías y Herramientas Utilizadas 
 
-- **PostgreSQL:** Para la gestión de la base de datos.
-- **SQLAlchemy:** Para conectar Python con PostgreSQL.
-- **Pandas:** Para la manipulación de datos en Python.
-- **Jupyter Notebook:** Para documentar el proceso de análisis.
-- **Python:** Para la importación y transformación de datos.
+<p><img src="https://github.com/user-attachments/assets/f381507e-9c84-4136-80de-1c8986469ef5" alt="PostgreSQL" width="20" height="20"/> <b>PostgreSQL:</b> Para la gestión de la base de datos.</p>
+<p><img src="https://img.icons8.com/?size=512&id=123603&format=png" alt="SQLAlchemy" width="20" height="20"/> <b>SQLAlchemy:</b> Para conectar Python con PostgreSQL.</p>
+<p><img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" width="20" height="20"/> <b>Pandas:</b> Para la manipulación de datos en Python.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter" width="20" height="20"/> <b>Jupyter Notebook:</b> Para documentar el proceso de análisis.</p>
+<p><img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python" width="20" height="20"/> <b>Python:</b> Para la importación y transformación de datos.</p>
 
 ## Estructura de Archivos 
 
@@ -75,3 +75,4 @@ Este proyecto proporciona información valiosa sobre los ingresos al por mayor p
 Si tienes preguntas o quieres más información, ponte en contacto conmigo.
 
 <a href="https://www.linkedin.com/in/jeanpaulomv/"><img src="https://img.shields.io/badge/jeanpaulomv-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"></a>
+<a href="https://www.datascienceportfol.io/jeanpaulomv"><img src="https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio" height="30"></a>
