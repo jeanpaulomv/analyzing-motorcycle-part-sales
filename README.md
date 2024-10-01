@@ -23,13 +23,14 @@ This project analyzes sales data from a company that sells motorcycle parts, foc
    - SQLAlchemy was employed in Python to facilitate data import and manipulation.
    - SQL queries were created to extract relevant information and generate reports.
 
-## Technologies and Tools Used 
+## Technologies and Tools Used  
 
-- **PostgreSQL:** For database management.
-- **SQLAlchemy:** To connect Python with PostgreSQL.
-- **Pandas:** For data manipulation in Python.
-- **Jupyter Notebook:** To document the analysis process.
-- **Python:** For data import and transformation.
+<p><img src="https://github.com/user-attachments/assets/f381507e-9c84-4136-80de-1c8986469ef5" alt="PostgreSQL" width="20" height="20"/> <b>PostgreSQL:</b> For database management.</p>
+<p><img src="https://img.icons8.com/?size=512&id=123603&format=png" alt="SQLAlchemy" width="20" height="20"/> <b>SQLAlchemy:</b> To connect Python with PostgreSQL.</p>
+<p><img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" width="20" height="20"/> <b>Pandas:</b> For data manipulation in Python.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter" width="20" height="20"/> <b>Jupyter Notebook:</b> To document the analysis process.</p>
+<p><img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python" width="20" height="20"/> <b>Python:</b> For data import and transformation.
+</p>
 
 ## File Structure 
 
@@ -75,3 +76,4 @@ This project provides valuable insights into wholesale revenue by product line, 
 If you have any questions or would like more information, feel free to contact me.
 
 <a href="https://www.linkedin.com/in/jeanpaulomv/"><img src="https://img.shields.io/badge/jeanpaulomv-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"></a>
+<a href="https://www.datascienceportfol.io/jeanpaulomv"><img src="https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio" height="30"></a>
