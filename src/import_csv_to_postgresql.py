@@ -12,12 +12,15 @@ db_url = os.getenv('DATABASE_URL')
 # Connect to PostgreSQL
 engine = create_engine(db_url)
 
+# Get CSV path from environment variables
+csv_path = os.getenv('CSV_PATH')
+
 # Read CSV file
-df = pd.read_csv('sales.csv')
+df = pd.read_csv(csv_path)
 
 # Clean null or invalid data
 df.dropna(inplace=True) 
-df['date'] = pd.to_datatime(df['date'], errors='coerce')
+df['date'] = pd.to_datetime(df['date'], errors='coerce')
 
 # Create the table automatically and import the data
 df.to_sql('sales', engine, index=False, if_exists='replace')
