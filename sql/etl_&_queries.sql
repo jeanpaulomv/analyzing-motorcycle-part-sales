@@ -56,10 +56,11 @@ FROM sales
 GROUP BY payment;
 
 -- Análisis de Márgenes y Rendimiento
-SELECT warehouse, 
-       SUM(quantity) AS total_quantity,
-       SUM(total) - SUM(payment_fee) AS net_revenue,
-       ROUND((SUM(total) - SUM(payment_fee)) / SUM(quantity), 2) AS revenue_per_unit
+SELECT 
+	warehouse,
+	SUM(quantity) AS total_quantity,
+	SUM(total) - SUM(payment_fee) AS net_revenue,
+	ROUND((SUM(total) - SUM(payment_fee)) / SUM(quantity), 2) AS revenue_per_unit
 FROM sales
 GROUP BY warehouse
 ORDER BY net_revenue DESC;
