@@ -47,20 +47,24 @@ FROM sales
 GROUP BY EXTRACT(MONTH FROM date), product_line
 ORDER BY EXTRACT(MONTH FROM date), total_sales DESC;
 
--- Análisis por Método de Pago
+-- Análisis de Márgenes y Rendimiento por Warehouse y product_line
+-- Warehouse con mas ingresos netos y unidades vendidas
 SELECT
-	payment,
-	SUM(total) AS total_revenue,
-	SUM(payment_fee) AS total_fees
-FROM sales
-GROUP BY payment;
-
--- Análisis de Márgenes y Rendimiento
-SELECT 
 	warehouse,
-	SUM(quantity) AS total_quantity,
-	SUM(total) - SUM(payment_fee) AS net_revenue,
-	ROUND((SUM(total) - SUM(payment_fee)) / SUM(quantity), 2) AS revenue_per_unit
+	SUM(quantity) as products_quantity,
+	ROUND(AVG(quantity), 2) AS avg_products,
+	SUM(total) - SUM(payment_fee) AS net_revenue
 FROM sales
 GROUP BY warehouse
+ORDER BY net_revenue DESC;
+
+-- Linea de productos mas vendidos en unidades y dolares
+SELECT
+	product_line,
+	SUM(quantity) as products_quantity,
+	ROUND((SUM(total) - SUM(payment_fee)) / SUM(quantity), 2) AS revenue_per_unit,
+	ROUND(AVG(total), 2) AS avg_total,
+	SUM(total) - SUM(payment_fee) AS net_revenue
+FROM sales
+GROUP BY product_line
 ORDER BY net_revenue DESC;
