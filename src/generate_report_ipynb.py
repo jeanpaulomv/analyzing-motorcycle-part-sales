@@ -84,7 +84,25 @@ nb.cells.append(nbf.v4.new_markdown_cell("# Reporte de Ventas"))
 # Agregar una celda de texto con la descripción
 nb.cells.append(nbf.v4.new_markdown_cell("Este notebook contiene un análisis de las ventas."))
 
-# Agregar celdas de código y resultados
+# Agregar una celda de texto para mostrar el dashboard principal
+nb.cells.append(nbf.v4.new_markdown_cell("## Dashboard Principal"))
+nb.cells.append(nbf.v4.new_markdown_cell("A continuacion se muestra el dashboard principal con todas las visualizaciones clave."))
+
+# Coloca la imagen del dashboard principal en la carpeta 'images/' con el nombre 'dashboard_main.png'
+# Ejemplo: /ruta_del_proyecto/images/dashboard_main.png
+nb.cells.append(nbf.v4.new_markdown_cell("![Dashboard Principal](../images/dashboard.png)"))
+
+# Diccionario que asocia cada consulta con su imagen correspondiente
+image_files = {
+    'net_revenue': '../images/net_sales_by_product_line_&_month.png',
+    'seasonality': '../images/seasonality_&_purchasing_patterns.png',
+    'payment_methods': '../images/revenue_by_payment_method.png',
+    'warehouse_performance': '../images/margin_&_performance.png',
+    'product_line_performance': '../images/product_lines.png'
+}
+
+
+# Agregar celdas de código y resultados con imágenes
 for key, df in dataframes.items():
     # Agregar celda de texto con el nombre de la consulta
     nb.cells.append(nbf.v4.new_markdown_cell(f"## {key.replace('_', ' ').title()}"))
@@ -92,6 +110,15 @@ for key, df in dataframes.items():
     # Agregar celda de código para mostrar el DataFrame
     code = f"import pandas as pd\n\ndf_{key} = pd.DataFrame({df.to_dict(orient='records')})\ndf_{key}"
     nb.cells.append(nbf.v4.new_code_cell(code))
+
+    # Buscar la imagen correspondiente usando el diccionario
+    if key in image_files:
+        image_path = f"../images/{image_files[key]}"  # Ruta relativa de la imagen
+        # Verificar si la imagen existe antes de agregarla al notebook
+        if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'images', image_files[key])):
+            nb.cells.append(nbf.v4.new_markdown_cell(f"![{key.replace('_', ' ').title()}]({image_path})"))
+        else:
+            nb.cells.append(nbf.v4.new_markdown_cell(f"*No se encontró la imagen del gráfico para {key.replace('_', ' ').title()}*"))
 
 # Guardar el notebook
 output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'output')

@@ -27,6 +27,12 @@
         .section {
             margin-bottom: 40px;
         }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%; /* Cambia esto según el tamaño que prefieras */
+        }
     </style>
 </head>
 <body>
@@ -34,6 +40,7 @@
 
     <div class="section">
         <h2>Ingresos netos por línea de producto, mes y almacén</h2>
+        <img src="../images/net_sales_by_product_line_&_month.png" alt="Gráfico de Ingresos Netos">
         <div>
             {{ net_revenue|safe }}
         </div>
@@ -41,6 +48,7 @@
 
     <div class="section">
         <h2>Estacionalidad y patrones de compra</h2>
+        <img src="../images/seasonality_&_purchasing_patterns.png" alt="Gráfico de Estacionalidad">
         <div>
             {{ seasonality|safe }}
         </div>
@@ -48,6 +56,7 @@
 
     <div class="section">
         <h2>Métodos de Pago</h2>
+        <img src="../images/revenue_by_payment_method.png" alt="Gráfico de Métodos de Pago">
         <div>
             {{ payment_methods|safe }}
         </div>
@@ -55,6 +64,7 @@
 
     <div class="section">
         <h2>Análisis de Márgenes y Rendimiento por Almacén</h2>
+        <img src="../images/margin_&_performance.png" alt="Gráfico de Rendimiento por Almacén">
         <div>
             {{ warehouse_performance|safe }}
         </div>
@@ -62,6 +72,7 @@
 
     <div class="section">
         <h2>Línea de Productos más Vendidos</h2>
+        <img src="../images/product_lines.png" alt="Gráfico de Productos más Vendidos">
         <div>
             {{ product_line_performance|safe }}
         </div>

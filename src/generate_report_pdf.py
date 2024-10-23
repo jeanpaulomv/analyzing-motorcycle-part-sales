@@ -93,6 +93,9 @@ html_content = template.render(
     product_line_performance=df_htmls['product_line_performance']
 )
 
+# Imprimir el contenido HTML en la consola para depuración
+print(html_content)  # Agrega esta línea para ver el contenido HTML generado
+
 # Definir la ruta para el archivo PDF de salida en la carpeta "output"
 output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'output')
 if not os.path.exists(output_dir):
