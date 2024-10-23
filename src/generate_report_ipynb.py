@@ -1,9 +1,8 @@
 import pandas as pd
 from sqlalchemy import create_engine
-from jinja2 import Environment, FileSystemLoader
-import pdfkit
 from dotenv import load_dotenv
 import os
+import nbformat as nbf
 
 # Cargar variables de entorno
 load_dotenv()
@@ -76,41 +75,33 @@ dataframes = {}
 for key, query in queries.items():
     dataframes[key] = pd.read_sql(query, engine)
 
-# Convertir los DataFrames a HTML
-df_htmls = {key: df.to_html(index=False) for key, df in dataframes.items()}
+# Crear un nuevo notebook
+nb = nbf.v4.new_notebook()
 
-# Definir la ruta del template HTML para el reporte (dentro de la carpeta "templates")
-template_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'templates')
-env = Environment(loader=FileSystemLoader(template_dir))
-template = env.get_template('report_template.html')
+# Agregar una celda de texto para el título
+nb.cells.append(nbf.v4.new_markdown_cell("# Reporte de Ventas"))
 
-# Renderizar el HTML con el contenido de los DataFrames como HTML
-html_content = template.render(
-    net_revenue=df_htmls['net_revenue'],
-    seasonality=df_htmls['seasonality'],
-    payment_methods=df_htmls['payment_methods'],
-    warehouse_performance=df_htmls['warehouse_performance'],
-    product_line_performance=df_htmls['product_line_performance']
-)
+# Agregar una celda de texto con la descripción
+nb.cells.append(nbf.v4.new_markdown_cell("Este notebook contiene un análisis de las ventas."))
 
-# Definir la ruta para el archivo PDF de salida en la carpeta "output"
+# Agregar celdas de código y resultados
+for key, df in dataframes.items():
+    # Agregar celda de texto con el nombre de la consulta
+    nb.cells.append(nbf.v4.new_markdown_cell(f"## {key.replace('_', ' ').title()}"))
+    
+    # Agregar celda de código para mostrar el DataFrame
+    code = f"import pandas as pd\n\ndf_{key} = pd.DataFrame({df.to_dict(orient='records')})\ndf_{key}"
+    nb.cells.append(nbf.v4.new_code_cell(code))
+
+# Guardar el notebook
 output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'output')
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)  # Crear la carpeta "output" si no existe
 
-pdf_path = os.path.join(output_dir, 'sales_report.pdf')
+notebook_path = os.path.join(output_dir, 'sales_report.ipynb')
 
-# Ruta al ejecutable de wkhtmltopdf (asegúrate de que es correcta para tu sistema)
-path_to_wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
+# Escribir el archivo .ipynb
+with open(notebook_path, 'w', encoding='utf-8') as f:
+    nbf.write(nb, f)
 
-# Verifica si el archivo existe
-if not os.path.exists(path_to_wkhtmltopdf):
-    raise FileNotFoundError(f"El ejecutable wkhtmltopdf no se encuentra en: {path_to_wkhtmltopdf}")
-
-# Configura pdfkit con la ruta correcta
-config = pdfkit.configuration(wkhtmltopdf=path_to_wkhtmltopdf)
-
-# Generar el archivo PDF a partir del contenido HTML
-pdfkit.from_string(html_content, pdf_path, configuration=config)
-
-print("Reporte PDF generado exitosamente.")
+print("Reporte .ipynb generado exitosamente.")
