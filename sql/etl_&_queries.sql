@@ -21,7 +21,7 @@ FROM sales
 WHERE quantity < 0 OR unit_price < 0;
 
 -- FASE 4: Consultas Detalladas
--- Ingresos netos al por mayor por línea de producto, mes y almacén.
+-- Ingresos netos por línea de producto, mes y almacén.
 SELECT 
 	product_line,
 	CASE 	WHEN EXTRACT(MONTH FROM date) = 6 THEN 'June'
@@ -31,7 +31,6 @@ SELECT
 	warehouse,
 	SUM(total) - SUM(payment_fee) AS net_revenue
 FROM sales
-WHERE client_type = 'Wholesale'
 GROUP BY product_line, EXTRACT(MONTH FROM date), warehouse
 ORDER BY product_line, EXTRACT(MONTH FROM date), net_revenue DESC;
 

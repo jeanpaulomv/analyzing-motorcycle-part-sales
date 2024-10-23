@@ -16,13 +16,17 @@ engine = create_engine(db_url)
 
 # Consulta SQL para obtener los datos
 query = '''
-SELECT warehouse, 
-       SUM(quantity) AS total_quantity,
-       SUM(total) - SUM(payment_fee) AS net_revenue,
-       ROUND((SUM(total) - SUM(payment_fee)) / SUM(quantity), 2) AS revenue_per_unit
+SELECT 
+	product_line,
+	CASE 	WHEN EXTRACT(MONTH FROM date) = 6 THEN 'June'
+			WHEN EXTRACT(MONTH FROM date) = 7 THEN 'July'
+			WHEN EXTRACT(MONTH FROM date) = 8 THEN 'August'
+	END AS month,
+	warehouse,
+	SUM(total) - SUM(payment_fee) AS net_revenue
 FROM sales
-GROUP BY warehouse
-ORDER BY net_revenue DESC;
+GROUP BY product_line, EXTRACT(MONTH FROM date), warehouse
+ORDER BY product_line, EXTRACT(MONTH FROM date), net_revenue DESC;
 '''
 
 # Ejecutar la consulta y cargar los datos en un DataFrame de pandas
