@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte de Ventas</title>
+    <title>Sales Report</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,56 +26,82 @@
         }
         .section {
             margin-bottom: 40px;
+            page-break-after: always; /* Page break after each section */
         }
         img {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%; /* Cambia esto según el tamaño que prefieras */
+            width: 100%; /* Make images occupy full width */
+            height: auto; /* Maintain image aspect ratio */
+        }
+        .spacing {
+            margin-top: 20px; /* Space between the table and the image */
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .back-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+        }
+        .back-button:hover {
+            background-color: #0056b3; /* Darker shade for hover effect */
         }
     </style>
 </head>
 <body>
-    <h1>Reporte de Ventas</h1>
+    <h1>Sales Report</h1>
 
     <div class="section">
-        <h2>Ingresos netos por línea de producto, mes y almacén</h2>
-        <img src="../images/net_sales_by_product_line_&_month.png" alt="Gráfico de Ingresos Netos">
-        <div>
+        <h2>Net Revenue by Product Line, Month, and Store</h2>
+        <div class="spacing"> <!-- Additional spacer -->
             {{ net_revenue|safe }}
         </div>
+        <img src="{{ net_sales_image_path }}" alt="Net Revenue Chart">
     </div>
 
     <div class="section">
-        <h2>Estacionalidad y patrones de compra</h2>
-        <img src="../images/seasonality_&_purchasing_patterns.png" alt="Gráfico de Estacionalidad">
-        <div>
+        <h2>Seasonality and Purchasing Patterns</h2>
+        <div class="spacing"> <!-- Additional spacer -->
             {{ seasonality|safe }}
         </div>
+        <img src="{{ seasonality_image_path }}" alt="Seasonality Chart">
     </div>
 
     <div class="section">
-        <h2>Métodos de Pago</h2>
-        <img src="../images/revenue_by_payment_method.png" alt="Gráfico de Métodos de Pago">
-        <div>
+        <h2>Payment Methods</h2>
+        <div class="spacing"> <!-- Additional spacer -->
             {{ payment_methods|safe }}
         </div>
+        <img src="{{ payment_methods_image_path }}" alt="Payment Methods Chart">
     </div>
 
     <div class="section">
-        <h2>Análisis de Márgenes y Rendimiento por Almacén</h2>
-        <img src="../images/margin_&_performance.png" alt="Gráfico de Rendimiento por Almacén">
-        <div>
+        <h2>Margin and Performance Analysis by Store</h2>
+        <div class="spacing"> <!-- Additional spacer -->
             {{ warehouse_performance|safe }}
         </div>
+        <img src="{{ warehouse_performance_image_path }}" alt="Store Performance Chart">
     </div>
 
     <div class="section">
-        <h2>Línea de Productos más Vendidos</h2>
-        <img src="../images/product_lines.png" alt="Gráfico de Productos más Vendidos">
-        <div>
+        <h2>Top Selling Product Lines</h2>
+        <div class="spacing"> <!-- Additional spacer -->
             {{ product_line_performance|safe }}
         </div>
+        <img src="{{ product_line_image_path }}" alt="Top Selling Products Chart">
+    </div>
+
+    <div class="button-container">
+        <a href="../README.md" class="back-button">Return to README</a>
     </div>
 
 </body>

@@ -26,7 +26,8 @@ queries = {
             SUM(total) - SUM(payment_fee) AS net_revenue
         FROM sales
         GROUP BY product_line, EXTRACT(MONTH FROM date), warehouse
-        ORDER BY product_line, EXTRACT(MONTH FROM date), net_revenue DESC;
+        ORDER BY product_line, EXTRACT(MONTH FROM date), net_revenue DESC
+        LIMIT 10;
     ''',
     'seasonality': '''
         SELECT
