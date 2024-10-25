@@ -58,10 +58,15 @@
     </style>
 </head>
 <body>
-    <h1>Sales Report</h1>
+    <div class="section">
+        <h1>Sales Report</h1>
+        <div class="spacing"> <!-- Additional spacer -->
+        </div>
+        <img src="{{ dashboard_image_path }}" alt="Seasonality Chart">
+    </div>
 
     <div class="section">
-        <h2>Net Revenue by Product Line, Month, and Store</h2>
+        <h2>Net Revenue by Product Line, Month and Warehouse</h2>
         <div class="spacing"> <!-- Additional spacer -->
             {{ net_revenue|safe }}
         </div>
@@ -77,7 +82,7 @@
     </div>
 
     <div class="section">
-        <h2>Payment Methods</h2>
+        <h2>Revenue by Payment Method</h2>
         <div class="spacing"> <!-- Additional spacer -->
             {{ payment_methods|safe }}
         </div>
@@ -85,7 +90,7 @@
     </div>
 
     <div class="section">
-        <h2>Margin and Performance Analysis by Store</h2>
+        <h2>Margin and Performance Analysis by Warehouse</h2>
         <div class="spacing"> <!-- Additional spacer -->
             {{ warehouse_performance|safe }}
         </div>
@@ -93,7 +98,7 @@
     </div>
 
     <div class="section">
-        <h2>Top Selling Product Lines</h2>
+        <h2>Best-selling Product Lines</h2>
         <div class="spacing"> <!-- Additional spacer -->
             {{ product_line_performance|safe }}
         </div>

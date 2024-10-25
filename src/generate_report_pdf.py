@@ -49,11 +49,13 @@ queries = {
         LIMIT 10;
     ''',
     'payment_methods': '''
-        SELECT payment,
-               SUM(total) AS total_revenue,
-               SUM(payment_fee) AS total_fees
+        SELECT
+            payment,
+            SUM(payment_fee) AS total_fees,
+            SUM(total) AS total_revenue
         FROM sales
-        GROUP BY payment;
+        GROUP BY payment
+        ORDER BY total_revenue DESC;
     ''',
     'warehouse_performance': '''
         SELECT
@@ -98,6 +100,7 @@ template = env.get_template('report_template.html')
 
 # Definir rutas absolutas para las imágenes
 image_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'images')
+dashboard_image_path = os.path.abspath(os.path.join(image_dir, 'dashboard.png'))
 net_sales_image_path = os.path.abspath(os.path.join(image_dir, 'net_sales_by_product_line_&_month.png'))
 seasonality_image_path = os.path.abspath(os.path.join(image_dir, 'seasonality_&_purchasing_patterns.png'))
 payment_methods_image_path = os.path.abspath(os.path.join(image_dir, 'revenue_by_payment_method.png'))
@@ -111,6 +114,7 @@ html_content = template.render(
     payment_methods=df_htmls['payment_methods'],
     warehouse_performance=df_htmls['warehouse_performance'],
     product_line_performance=df_htmls['product_line_performance'],
+    dashboard_image_path=dashboard_image_path,
     net_sales_image_path=net_sales_image_path,
     seasonality_image_path=seasonality_image_path,
     payment_methods_image_path=payment_methods_image_path,
