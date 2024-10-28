@@ -95,10 +95,10 @@ nb.cells.append(nbf.v4.new_markdown_cell("![Dashboard Principal](../images/dashb
 
 # Diccionario que asocia cada consulta con su imagen correspondiente
 image_files = {
-    'net_revenue': '../images/net_sales_by_product_line_&_month.png',
-    'seasonality': '../images/seasonality_&_purchasing_patterns.png',
+    'net_revenue': '../images/net_sales_by_product_line_month.png',
+    'seasonality': '../images/seasonality_purchasing_patterns.png',
     'payment_methods': '../images/revenue_by_payment_method.png',
-    'warehouse_performance': '../images/margin_&_performance.png',
+    'warehouse_performance': '../images/margin_performance.png',
     'product_line_performance': '../images/product_lines.png'
 }
 

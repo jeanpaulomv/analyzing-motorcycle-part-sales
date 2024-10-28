@@ -101,10 +101,10 @@ template = env.get_template('report_template.html')
 # Definir rutas absolutas para las imágenes
 image_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'images')
 dashboard_image_path = os.path.abspath(os.path.join(image_dir, 'dashboard.png'))
-net_sales_image_path = os.path.abspath(os.path.join(image_dir, 'net_sales_by_product_line_&_month.png'))
-seasonality_image_path = os.path.abspath(os.path.join(image_dir, 'seasonality_&_purchasing_patterns.png'))
+net_sales_image_path = os.path.abspath(os.path.join(image_dir, 'net_sales_by_product_line_month.png'))
+seasonality_image_path = os.path.abspath(os.path.join(image_dir, 'seasonality_purchasing_patterns.png'))
 payment_methods_image_path = os.path.abspath(os.path.join(image_dir, 'revenue_by_payment_method.png'))
-warehouse_performance_image_path = os.path.abspath(os.path.join(image_dir, 'margin_&_performance.png'))
+warehouse_performance_image_path = os.path.abspath(os.path.join(image_dir, 'margin_performance.png'))
 product_line_image_path = os.path.abspath(os.path.join(image_dir, 'product_lines.png'))
 
 # Renderizar el HTML con el contenido de los DataFrames como HTML y las rutas de las imágenes
