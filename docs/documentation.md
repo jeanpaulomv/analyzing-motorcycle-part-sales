@@ -34,24 +34,25 @@ Este proyecto se enfoca en el análisis de los ingresos generados por diferentes
 
 ## Entregables
 
-1. **Reporte SQL**:
+1. **Reportes generados con Código de Automatización en Python**:
+
+   - Scripts para la carga y limpieza de datos.
+   - Generación de reportes automatizados en PDF y Jupyter Notebook.
+
+2. **Reporte SQL**:
 
    - Consultas SQL que permitan extraer ingresos por línea de producto y almacén.
    - Identificación de patrones de ventas y estacionalidad.
 
-2. **Dashboards en Power BI**:
+3. **Dashboards en Power BI**:
 
    - Indicadores clave (ingresos por línea de producto, almacén y método de pago).
    - Visualización de tendencias y estacionalidad.
 
-3. **Documentación Técnica**:
+4. **Documentación Técnica**:
 
    - Descripción del flujo de trabajo y justificación de técnicas.
    - Procedimientos de ETL y transformaciones en SQL y Python.
-
-4. **Código de Automatización en Python**:
-   - Scripts para la carga y limpieza de datos.
-   - Generación de reportes automatizados en PDF y Jupyter Notebook.
 
 ---
 
@@ -129,6 +130,7 @@ Evalúa el rendimiento de cada almacén en términos de ingresos netos y rentabi
    - **Análisis de Estacionalidad**: Gráfico de líneas para observar estacionalidad en ventas.
    - **Impacto de Métodos de Pago**: Gráfico circular para identificar la contribución de cada método al ingreso total.
    - **Rendimiento por Almacén**: Tarjetas de KPI para comparar almacenes y su margen de ingresos.
+   - **Comparativo de Productos**: Gráfico combinado de columnas y líneas para ver los productos mas vendidos.
 
 3. **Análisis Predictivo y Proyección de Tendencias**:
    - `Forecasting` para anticipar tendencias de ventas, facilitando la toma de decisiones sobre inventarios y promociones futuras.
