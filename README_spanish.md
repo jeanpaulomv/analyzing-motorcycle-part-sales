@@ -16,7 +16,7 @@
 
 Cada uno de estos insights se visualiza con **dashboards en Power BI** para apoyar decisiones basadas en datos en tiempo real.
 
-![banner](/images/dashboard.png) <!-- Esta línea añade un banner visual al inicio, relevante al tema del proyecto -->
+![banner](images/Dashboard.png) <!-- Esta línea añade un banner visual al inicio, relevante al tema del proyecto -->
 
 ---
 

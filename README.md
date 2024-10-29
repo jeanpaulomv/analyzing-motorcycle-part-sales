@@ -16,7 +16,7 @@
 
 Each of these insights is visualized with **Power BI dashboards** to support data-driven decisions in real time.
 
-![banner](/images/dashboard.png) <!-- Esta línea añade un banner visual al inicio, relevante al tema del proyecto -->
+![banner](images/Dashboard.png) <!-- Esta línea añade un banner visual al inicio, relevante al tema del proyecto -->
 
 ---
 
