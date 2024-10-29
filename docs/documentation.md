@@ -1,4 +1,4 @@
-# Proyecto de Análisis de Ingresos por Producto y Almacén
+# Project Analyzing motorcycle part sales
 
 ## Tabla de Contenidos
 
@@ -111,7 +111,7 @@ Esta consulta identifica los patrones de ventas mensuales y estacionales, facili
 
 Consulta para analizar cómo afecta cada método de pago el margen de ingresos, facilitando la optimización de métodos de pago para maximizar ingresos.
 
-### 4. Análisis de Márgenes y Eficiencia por Almacén
+### 4. Análisis de Márgenes y Eficiencia por Almacén y Línea de Producto
 
 Evalúa el rendimiento de cada almacén en términos de ingresos netos y rentabilidad, lo cual permite priorizar almacenes de mejor desempeño.
 

@@ -122,12 +122,12 @@ html_content = template.render(
     product_line_image_path=product_line_image_path
 )
 
-# Definir la ruta para el archivo PDF de salida en la carpeta "output"
-output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'output')
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)  # Crear la carpeta "output" si no existe
+# Definir la ruta y guardar el archivo PDF en la carpeta "report"
+report_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'reports')
+if not os.path.exists(report_dir):
+    os.makedirs(report_dir)  # Crear la carpeta "reports" si no existe
 
-pdf_path = os.path.join(output_dir, 'sales_report.pdf')
+pdf_path = os.path.join(report_dir, 'sales_report.pdf')
 
 # Ruta al ejecutable de wkhtmltopdf (asegúrate de que es correcta para tu sistema)
 path_to_wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"

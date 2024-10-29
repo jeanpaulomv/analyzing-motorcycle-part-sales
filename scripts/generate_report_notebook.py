@@ -95,7 +95,7 @@ nb.cells.append(nbf.v4.new_markdown_cell("![Dashboard Principal](../images/dashb
 
 # Diccionario que asocia cada consulta con su imagen correspondiente
 image_files = {
-    'net_revenue': '../images/net_sales_by_product_line_month.png',
+    'net_revenue': '../images/net_Sales_by_product_line_month.png',
     'seasonality': '../images/seasonality_purchasing_patterns.png',
     'payment_methods': '../images/revenue_by_payment_method.png',
     'warehouse_performance': '../images/margin_performance.png',
@@ -121,15 +121,16 @@ for key, df in dataframes.items():
         else:
             nb.cells.append(nbf.v4.new_markdown_cell(f"*No se encontró la imagen del gráfico para {key.replace('_', ' ').title()}*"))
 
-# Guardar el notebook
-output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'output')
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)  # Crear la carpeta "output" si no existe
 
-notebook_path = os.path.join(output_dir, 'sales_report.ipynb')
+# Definir la ruta y guardar el notebook en carpeta report
+report_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'reports')
+if not os.path.exists(report_dir):
+    os.makedirs(report_dir) # crear la carpeta "reports" si no existe
+
+notebook_path = os.path.join(report_dir, 'sales_report.ipynb')
 
 # Escribir el archivo .ipynb
 with open(notebook_path, 'w', encoding='utf-8') as f:
     nbf.write(nb, f)
 
-print("Reporte .ipynb generado exitosamente.")
+print("Reporte '.ipynb' generado exitosamente.")

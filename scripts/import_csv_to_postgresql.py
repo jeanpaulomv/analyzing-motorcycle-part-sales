@@ -18,7 +18,7 @@ csv_path = os.getenv('CSV_PATH')
 # Read CSV file
 df = pd.read_csv(csv_path)
 
-# Clean null or invalid data
+# Clean null or invalid data and conversion in the 'date' column
 df.dropna(inplace=True) 
 df['date'] = pd.to_datetime(df['date'], errors='coerce')
 
