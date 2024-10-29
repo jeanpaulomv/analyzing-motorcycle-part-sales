@@ -1,74 +1,67 @@
-# Análisis de Ventas de Partes de Motocicletas 
+# Analyzing Motorcycle Part Sales
 
-## Descripción del Proyecto 
+> **Proyecto de análisis de datos** enfocado en los ingresos generados por diferentes líneas de productos en diversos almacenes, específicamente durante los meses de junio, julio y agosto. El análisis aborda aspectos de estacionalidad, patrones de compra, impacto de los métodos de pago y rendimiento de cada almacén.
 
-Este proyecto analiza datos de ventas de una empresa que comercializa partes de motocicletas, con un enfoque en las transacciones al por mayor. El objetivo del análisis es proporcionar insights útiles sobre las fuentes de ingresos, examinando líneas de productos, tarifas de pago y la distribución por almacenes. Este proyecto forma parte de un curso de DataCamp y demuestra mi capacidad para trabajar con grandes conjuntos de datos, realizar consultas SQL complejas y utilizar PostgreSQL para la gestión de datos.
+---
 
-## Pasos Clave en el Análisis 
+## Objetivos del Proyecto
 
-1. **Transformación de Datos:**
+- **Pregunta Principal**: ¿Cómo varían los ingresos netos por línea de productos y almacén durante los meses de junio, julio y agosto?
+- **Subpreguntas**:
 
-   - Las fechas se convirtieron en nombres de meses para simplificar el análisis.
-   - Se restaron las tarifas de pago del valor total de los pedidos para calcular el ingreso neto.
+  - **Estacionalidad y Patrones de Compra**: ¿Cómo varían las ventas de productos en junio, julio y agosto?
+  - **Ingresos por Línea de Producto y Almacén**: ¿Qué líneas de producto y almacenes generan mayores ingresos?
+  - **Optimización de Métodos de Pago**: ¿Qué impacto tienen los métodos de pago en los ingresos y costos?
+  - **Análisis de Márgenes y Eficiencia**: ¿Qué productos y ubicaciones son más rentables?
 
-2. **Filtrado y Agrupación de Datos:**
+Cada uno de estos insights se visualiza con **dashboards en Power BI** para apoyar decisiones basadas en datos en tiempo real.
 
-   - Se enfocó exclusivamente en pedidos al por mayor.
-   - Se agruparon los datos por línea de producto, mes y almacén.
-   - Se ordenaron los resultados por línea de producto, mes e ingreso neto.
+![banner](/images/dashboard.png) <!-- Esta línea añade un banner visual al inicio, relevante al tema del proyecto -->
 
-3. **Gestión de la Base de Datos:**
+---
 
-   - Se utilizó PostgreSQL para almacenar y gestionar los datos de ventas.
-   - Se empleó SQLAlchemy en Python para facilitar la importación y manipulación de datos.
-   - Se crearon consultas SQL para extraer información relevante y generar reportes.
+## Resultados Clave y Dashboards
 
-## Tecnologías y Herramientas Utilizadas 
+Los insights se representan visualmente a través de dashboards interactivos y reportes automatizados, permitiendo a los usuarios explorar:
 
-<p><img src="https://github.com/user-attachments/assets/f381507e-9c84-4136-80de-1c8986469ef5" alt="PostgreSQL" width="20" height="20"/> <b>PostgreSQL:</b> Para la gestión de la base de datos.</p>
-<p><img src="https://img.icons8.com/?size=512&id=123603&format=png" alt="SQLAlchemy" width="20" height="20"/> <b>SQLAlchemy:</b> Para conectar Python con PostgreSQL.</p>
-<p><img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" width="20" height="20"/> <b>Pandas:</b> Para la manipulación de datos en Python.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter" width="20" height="20"/> <b>Jupyter Notebook:</b> Para documentar el proceso de análisis.</p>
-<p><img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python" width="20" height="20"/> <b>Python:</b> Para la importación y transformación de datos.</p>
+1. **Ingresos Netos por Línea de Producto y Almacén**
+   - Desglose de contribuciones mensuales por línea de producto.
+2. **Análisis de Tendencias Estacionales**
+   - Gráficos de líneas que destacan los patrones de demanda y los períodos de alta venta.
+3. **Impacto de los Métodos de Pago**
+   - Gráficos circulares y KPIs muestran la distribución de ingresos por métodos de pago, optimizando la eficiencia de costos.
+4. **Rendimiento por Almacén**
+   - Tarjetas de KPI y gráficos de barras que comparan márgenes y rentabilidad de los almacenes.
 
-## Estructura de Archivos 
+---
 
-- [`datos`](data/sales.csv) - Datos de ventas utilizados en el proyecto.
-- [`imagen`](images/motorcycle.jpg) - Imagen utilizada en el cuaderno.
-- [`notebook`](notebooks/project_instructions.ipynb) - Cuaderno de Jupyter con las instrucciones del proyecto.
-- [`solución de consulta`](sql/query_solution.sql) - Consulta SQL utilizada para extraer y analizar los datos.
-- [`script`](src/import_csv_to_postgresql.py) - Script en Python para importar datos CSV a PostgreSQL.
-- [`.gitignore`](./.gitignore) - Especifica los archivos y directorios que deben ser ignorados por Git.
-- [`README.md`](README.md) - Este archivo de documentación.
-- [`README_spanish.md`](README_spanish.md) - Versión en español de la documentación.
-- [`requirements.txt`](requirements.txt) - Instala todas las dependencias.
+## Estructura del Proyecto
 
-## Documentación e Instrucciones de Configuración 
+```plaintext
+analyzing_motorcycle_part_sales/
+├── data/                   # Datos en bruto y limpios
+├── docs/                   # Documentación
+├── images/                 # Imágenes de dashboards y recursos visuales
+├── power_bi/               # Dashboards interactivos de Power BI
+├── reports/                # Reportes automatizados (PDFs, Notebooks)
+├── scripts/                # Scripts de automatización en Python
+├── sql/                    # Consultas y scripts SQL
+├── templates/              # Plantilla para reporte en PDF
+├── README.md               # Descripción general del proyecto y detalles
+└── requirements.txt        # Dependencias del proyecto
+```
 
-1. **Instalación de Dependencias:**
+---
 
-   - Ejecuta `pip install -r requirements.txt` para instalar todas las bibliotecas necesarias.
+## Tecnologías y Herramientas Utilizadas
 
-2. **Configuración de Variables de Entorno:**
+<p><img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python" width="20" height="20"/> <b>Python:</b> Scripts para extracción, transformación y automatización de datos.</p>
 
-   - Crea un archivo `.env` en el directorio raíz y agrega lo siguiente:
-     ```plaintext
-     DATABASE_URL=tu_url_de_base_de_datos_aqui
-     ```
-   - Reemplaza `tu_url_de_base_de_datos_aqui` con la URL de tu base de datos PostgreSQL.
+<p><img src="https://github.com/user-attachments/assets/f381507e-9c84-4136-80de-1c8986469ef5" alt="PostgreSQL" width="20" height="20"/> <b>PostgreSQL:</b> Base de datos para almacenamiento estructurado y consultas.</p>
 
-3. **Ejecución del Script en Python:**
+<p><img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI" width="20" height="20"/> <b>Power BI:</b> Dashboards interactivos para insights visuales y seguimiento de KPIs.</p>
 
-   - Ejecuta el script [`import_csv_to_postgresql.py`](src/import_csv_to_postgresql.py) para importar los datos del CSV a la base de datos PostgreSQL.
-   - El script lee desde `sales.csv` y llena la tabla `sales` en tu base de datos PostgreSQL.
-
-4. **Ejecutar Consulta SQL:**
-
-   - Revisa y ejecuta la consulta en [`query_solution.sql`](sql/query_solution.sql) para obtener el reporte solicitado.
-
-## Conclusión 
-
-Este proyecto proporciona información valiosa sobre los ingresos al por mayor por línea de producto, mes y almacén, ayudando a la empresa a comprender mejor su rendimiento financiero. El enfoque utilizado en este análisis es eficiente y se puede adaptar a escenarios comerciales similares.
+---
 
 ## Contacto
 

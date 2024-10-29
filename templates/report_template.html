@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .section {
+            margin-bottom: 40px;
+            page-break-after: always; /* Page break after each section */
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%; /* Make images occupy full width */
+            height: auto; /* Maintain image aspect ratio */
+        }
+        .spacing {
+            margin-top: 20px; /* Space between the table and the image */
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .back-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+        }
+        .back-button:hover {
+            background-color: #0056b3; /* Darker shade for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Sales Report</h1>
+        <div class="spacing"> <!-- Additional spacer -->
+        </div>
+        <img src="{{ dashboard_image_path }}" alt="Seasonality Chart">
+    </div>
+
+    <div class="section">
+        <h2>Net Revenue by Product Line, Month and Warehouse</h2>
+        <div class="spacing"> <!-- Additional spacer -->
+            {{ net_revenue|safe }}
+        </div>
+        <img src="{{ net_sales_image_path }}" alt="Net Revenue Chart">
+    </div>
+
+    <div class="section">
+        <h2>Seasonality and Purchasing Patterns</h2>
+        <div class="spacing"> <!-- Additional spacer -->
+            {{ seasonality|safe }}
+        </div>
+        <img src="{{ seasonality_image_path }}" alt="Seasonality Chart">
+    </div>
+
+    <div class="section">
+        <h2>Revenue by Payment Method</h2>
+        <div class="spacing"> <!-- Additional spacer -->
+            {{ payment_methods|safe }}
+        </div>
+        <img src="{{ payment_methods_image_path }}" alt="Payment Methods Chart">
+    </div>
+
+    <div class="section">
+        <h2>Margin and Performance Analysis by Warehouse</h2>
+        <div class="spacing"> <!-- Additional spacer -->
+            {{ warehouse_performance|safe }}
+        </div>
+        <img src="{{ warehouse_performance_image_path }}" alt="Store Performance Chart">
+    </div>
+
+    <div class="section">
+        <h2>Best-selling Product Lines</h2>
+        <div class="spacing"> <!-- Additional spacer -->
+            {{ product_line_performance|safe }}
+        </div>
+        <img src="{{ product_line_image_path }}" alt="Top Selling Products Chart">
+    </div>
+
+    <div class="button-container">
+        <a href="../README.md" class="back-button">Return to README</a>
+    </div>
+
+</body>
+</html>
