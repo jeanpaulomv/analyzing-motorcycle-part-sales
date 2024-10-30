@@ -91,11 +91,11 @@ nb.cells.append(nbf.v4.new_markdown_cell("A continuacion se muestra el dashboard
 
 # Coloca la imagen del dashboard principal en la carpeta 'images/' con el nombre 'dashboard_main.png'
 # Ejemplo: /ruta_del_proyecto/images/dashboard_main.png
-nb.cells.append(nbf.v4.new_markdown_cell("![Dashboard Principal](../images/dashboard.png)"))
+nb.cells.append(nbf.v4.new_markdown_cell("![Dashboard Principal](../images/Dashboard.png)"))
 
 # Diccionario que asocia cada consulta con su imagen correspondiente
 image_files = {
-    'net_revenue': '../images/net_Sales_by_product_line_month.png',
+    'net_revenue': '../images/net_sales_by_product_line_month.png',
     'seasonality': '../images/seasonality_purchasing_patterns.png',
     'payment_methods': '../images/revenue_by_payment_method.png',
     'warehouse_performance': '../images/margin_performance.png',
