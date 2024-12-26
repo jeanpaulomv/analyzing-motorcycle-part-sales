@@ -6,7 +6,7 @@
 2. [Objetivos del Proyecto](#objetivos-del-proyecto)
 3. [Entregables](#entregables)
 4. [Configuración del Entorno](#configuración-del-entorno)
-5. [Proceso ETL](#proceso-etl)
+5. [Pipeline ETL](#pipeline-etl)
 6. [Consultas SQL](#consultas-sql)
 7. [Visualización de Resultados en Power BI](#visualización-de-resultados-en-power-bi)
 8. [Herramientas Utilizadas](#herramientas-utilizadas)
@@ -72,7 +72,7 @@ Este proyecto se enfoca en el análisis de los ingresos generados por diferentes
 
 ---
 
-## Proceso ETL
+## Pipeline ETL
 
 ### 1. Extracción de Datos
 
