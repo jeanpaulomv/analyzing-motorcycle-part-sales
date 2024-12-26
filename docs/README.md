@@ -125,6 +125,7 @@ Evaluates the performance of each warehouse in terms of net revenue and profitab
 
 2. **Interactive Dashboards**:
 
+   - **Main Dashboard**: Interactive dashboard with the most relevant charts and insights.
    - **Net Revenue by Product Line and Warehouse**: Visualization of revenue by product and warehouse, broken down by month.
    - **Seasonality Analysis**: Line graph to observe seasonality in sales.
    - **Payment Method Impact**: Pie chart to identify the contribution of each payment method to total revenue.
