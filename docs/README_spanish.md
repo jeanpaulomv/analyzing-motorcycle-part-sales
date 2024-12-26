@@ -126,6 +126,7 @@ Evalúa el rendimiento de cada almacén en términos de ingresos netos y rentabi
 
 2. **Dashboards Interactivos**:
 
+   - **Dashboard Principal**: Dashboard interactivo con los graficos y los insights mas relevantes.
    - **Ingresos Netos por Línea y Almacén**: Visualización de ingresos por producto y almacén, desglosados por mes.
    - **Análisis de Estacionalidad**: Gráfico de líneas para observar estacionalidad en ventas.
    - **Impacto de Métodos de Pago**: Gráfico circular para identificar la contribución de cada método al ingreso total.
